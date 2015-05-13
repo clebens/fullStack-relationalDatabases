@@ -1,7 +1,7 @@
 # Tournament Results Project
 #### created by Colin Lebens (for Udacity Relational Databases course)
 
-_*Notes on Execution:*_
+_Notes on Execution:_
 
 - The tournament.sql file should be executed within postgres (psql) when the 'tournament' database is currently loaded to delete conflicting table schemas and add the appropraite table schemas and views.
 
