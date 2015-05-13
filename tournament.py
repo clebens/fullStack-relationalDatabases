@@ -99,7 +99,20 @@ def swissPairings():
     """
 
     standings = playerStandings()
+    db = connect()
+    c = db.cursor()
+    c.execute('select * from matches')
+    matches = c.fetchall()
     pairings = []
-    for i in range(0, len(standings), 2):
-      pairings.append((standings[i][0],standings[i][1],standings[i+1][0], standings[i+1][1]))
+    
+    # This iteration through the standings is done
+    # in a slightly non-intuitive way to better support
+    # eventual impelementation of extra credit features
+    # (and may support non-even player lists, but 
+    # is contingent on match-winner decision logic)
+    
+    while standings:
+      player1 = standings.pop()
+      player2 = standings.pop()
+      pairings.append((player1[0], player1[1], player2[0], player2[1]))
     return pairings
