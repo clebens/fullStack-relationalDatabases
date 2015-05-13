@@ -1,6 +1,6 @@
 # Tournament Results Project
 ### created by Colin Lebens
-### (for Udacity Relational Databases course)
+#### (for Udacity Relational Databases course)
 
 _*Notes on Execution:*_
 
